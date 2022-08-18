@@ -8,8 +8,11 @@ import Home from './booking/Home';
 function App() {
   return (
     <Router>
-      <Home />
-      <Login />
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route exact path='/register' element={<Register />}></Route>
+      </Routes>
     </Router>
   );
 }
